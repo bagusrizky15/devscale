@@ -1,3 +1,5 @@
+const URL = "https://v1.appbackend.io/v1/rows/DUKu3IUDT9y9";
+
 async function getData(URL) {
   try {
     const response = await fetch(URL);
@@ -9,7 +11,6 @@ async function getData(URL) {
 }
 
 async function main() {
-  const URL = "https://v1.appbackend.io/v1/rows/DUKu3IUDT9y9";
   const todos = await getData(URL);
   console.log(todos);
 
@@ -28,3 +29,30 @@ async function main() {
 }
 
 main();
+
+const titleInput = document.getElementById("title");
+const descInput = document.getElementById("description");
+const submitBtn = document.getElementById("submit");
+
+submitBtn.addEventListener("click", async () => {
+  const titleValue = titleInput.value;
+  const descValue = descInput.value;
+
+  await fetch(URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify([
+      {
+        title: titleValue,
+        description: descValue,
+      },
+    ]),
+  });
+
+  console.log(titleValue);
+  console.log(descValue);
+
+  window.location.reload()
+});
