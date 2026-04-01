@@ -1,16 +1,21 @@
 {
-  "name": "meet-10-react-monorepo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "pnpm --parallel --filter=api --filter=platform --filter=@devscale/ui dev"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.15.1",
-  "dependencies": {
-    "dotenv-cli": "^11.0.0"
-  }
+	"name": "meet-10-react-monorepo",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "pnpm --parallel --filter=api --filter=platform --filter=@devscale/ui dev",
+		"lint": "pnpx @biomejs/biome check",
+		"lint:fix": "pnpx @biomejs/biome check --write --unsafe"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"packageManager": "pnpm@10.15.1",
+	"dependencies": {
+		"dotenv-cli": "^11.0.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.4.10"
+	}
 }

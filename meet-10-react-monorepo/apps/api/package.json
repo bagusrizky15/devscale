@@ -1,25 +1,29 @@
 {
-  "name": "api",
-  "type": "module",
-  "scripts": {
-    "dev": "tsx watch src/index.ts",
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "db:migrate": "pnpm with-env prisma migrate dev",
-    "with-env": "dotenv -e ../../.env --"
-  },
-  "dependencies": {
-    "@devscale/logger": "workspace:*",
-    "@hono/node-server": "^1.19.11",
-    "@prisma/adapter-better-sqlite3": "^7.5.0",
-    "@prisma/client": "^7.5.0",
-    "better-sqlite3": "^12.8.0",
-    "hono": "^4.12.8",
-    "prisma": "^7.5.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20.11.17",
-    "tsx": "^4.7.1",
-    "typescript": "^5.8.3"
-  }
+	"name": "api",
+	"type": "module",
+	"scripts": {
+		"dev": "tsx watch src/index.ts",
+		"build": "tsc",
+		"start": "node dist/index.js",
+		"db:migrate": "pnpm with-env prisma migrate dev",
+		"db:generate": "pnpm with-env prisma generate",
+		"db:studio": "pnpm with-env prisma studio",
+		"with-env": "dotenv -e ../../.env --"
+	},
+	"dependencies": {
+		"@devscale/logger": "workspace:*",
+		"@hono/node-server": "^1.19.11",
+		"@hono/zod-validator": "^0.7.6",
+		"@prisma/adapter-better-sqlite3": "^7.6.0",
+		"@prisma/client": "^7.6.0",
+		"better-sqlite3": "^12.8.0",
+		"hono": "^4.12.8",
+		"prisma": "^7.5.0",
+		"zod": "^4.3.6"
+	},
+	"devDependencies": {
+		"@types/node": "^20.11.17",
+		"tsx": "^4.7.1",
+		"typescript": "^5.8.3"
+	}
 }

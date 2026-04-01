@@ -1,10 +1,14 @@
-import { createFileRoute } from '@tanstack/react-router'
-import { Button } from '../../../../../packages/ui/src'
+import { createFileRoute } from "@tanstack/react-router";
+import { Button } from "../../../../../packages/ui/src";
 
-export const Route = createFileRoute('/demo/')({
-  component: RouteComponent,
-})
+export const Route = createFileRoute("/demo/")({
+	component: RouteComponent,
+});
 
 function RouteComponent() {
-  return <div><Button>Halo button</Button></div>
+	return (
+		<div>
+			<Button>Halo button</Button>
+		</div>
+	);
 }

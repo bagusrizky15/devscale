@@ -1,3 +1,3 @@
 export function log(message: string) {
-    console.log(`[LOG-PACKAGE] : ${message}`)
+	console.log(`[LOG-PACKAGE] : ${message}`);
 }
